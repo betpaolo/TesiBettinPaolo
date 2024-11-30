@@ -14,14 +14,14 @@ link_directories("/usr/local/lib")
 target_link_libraries(HEPowerConsumption cryptopp)
 
 
-# GMP (Gestione corretta dell'include e della libreria)
+# GMP 
 set(GMP_INCLUDE_DIR "/usr/include/x86_64-linux-gnu") 
 set(GMP_LIBRARY "/usr/lib/x86_64-linux-gnu/libgmp.a")  
 
 include_directories(${GMP_INCLUDE_DIR}) 
 #target_link_libraries(HEPowerConsumption ${GMP_LIBRARY}) 
 
-# Paillier (Correzione nel percorso include e libreria)
+# Paillier 
 set(PAILLIER_INCLUDE_DIR "/usr/local/include") 
 set(PAILLIER_LIBRARY "/usr/local/lib/libpaillier.a")  
 
