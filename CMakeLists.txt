@@ -15,15 +15,15 @@ target_link_libraries(HEPowerConsumption cryptopp)
 
 
 # GMP (Gestione corretta dell'include e della libreria)
-set(GMP_INCLUDE_DIR "/usr/include/x86_64-linux-gnu")  # Aggiorna questo percorso se necessario
-set(GMP_LIBRARY "/usr/lib/x86_64-linux-gnu/libgmp.a")  # Aggiorna questo percorso se necessario
+set(GMP_INCLUDE_DIR "/usr/include/x86_64-linux-gnu") 
+set(GMP_LIBRARY "/usr/lib/x86_64-linux-gnu/libgmp.a")  
 
-include_directories(${GMP_INCLUDE_DIR})  # Include la directory
-#target_link_libraries(HEPowerConsumption ${GMP_LIBRARY})  # Collega la libreria
+include_directories(${GMP_INCLUDE_DIR}) 
+#target_link_libraries(HEPowerConsumption ${GMP_LIBRARY}) 
 
 # Paillier (Correzione nel percorso include e libreria)
-set(PAILLIER_INCLUDE_DIR "/usr/local/include")  # Directory contenente paillier.h
-set(PAILLIER_LIBRARY "/usr/local/lib/libpaillier.a")  # Libreria statica Paillier
+set(PAILLIER_INCLUDE_DIR "/usr/local/include") 
+set(PAILLIER_LIBRARY "/usr/local/lib/libpaillier.a")  
 
-include_directories(${PAILLIER_INCLUDE_DIR})  # Include la directory
-target_link_libraries(HEPowerConsumption ${PAILLIER_LIBRARY} ${GMP_LIBRARY})  # Collega la libreria Paillier
+include_directories(${PAILLIER_INCLUDE_DIR}) 
+target_link_libraries(HEPowerConsumption ${PAILLIER_LIBRARY} ${GMP_LIBRARY})  
